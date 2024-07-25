@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-container">
+            <div class=" item nom">Fanomezana</div>
+            <div class="menu" onclick="toogleVisibility()"><i class="fa-solid fa-bars"></i></div>
+            <div class="col-3 home"><a href="index.html">Home</a></div>
+            <div class="col-3 about"><a href="about.html">About</a></div>
+            <div class="col-3 projet"><a href="projet.html">Projet</a></div>
+            <div class="col-3 contact"><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="parent-container">
+        <div class = "container">
+            <div class="competence col">
+                <h1>Développeur d'application web fullstack</h1>
+            </div>
+            <div class="description">
+                <p>Salut, je suis Rakotondrabe Miora Fanomezana ,étudiant en fin de premier cycle en baccalauréat en informatique à l'Université de Québec à Chicoutimi. Passionné par le déveleppement web et le développement d'application. j'aime créer des solutions
+                    innovantes et fonctionnelles. Explorez mes projets pour voir mes réalisations et en apprendre plus sur mon parcours et mes compétences.
+                </p>
+            </div>
+        </div>
+        <div class="profil">
+            <img src="img/profil.jpeg" alt="mon profil">
+        </div>
+    </div>
+    <script>
+        function toogleVisibility(){
+            var elementToHide = document.getElementsByClassName('col-3');
+            if(elementToHide[0].style.display == 'none'){
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'flex'
+                }
+            }
+            else if(elementToHide[0].style.display == 'flex'){
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'none'
+                }
+            }
+            else{
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'flex'
+                }
+            }
+        }
+    </script>
+</body>

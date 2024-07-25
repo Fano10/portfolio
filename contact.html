@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class=" item nom">Fanomezana</div>
+        <div class="menu" onclick="toogleVisibility()"><i class="fa-solid fa-bars"></i></div>
+        <div class="col-3 home"><a href="index.html">Home</a></div>
+        <div class="col-3 about"><a href="about.html">About</a></div>
+        <div class="col-3 projet"><a href="projet.html">Projet</a></div>
+        <div class="col-3 contact"><a href="contact.html">Contact</a></div>
+</div>
+    <div class="conteneur">
+        <p class="nom">Rakotondrabe <br> Miora <br> Fanomezana</p>
+        <p class="description"> Adresse: 619 rue Audet, Québec Chicoutimi, G7J 2W4</p>
+        <p class="description">Email: rsjasonfano@gmail.com</p>
+        <p class="description">Cellulaire: 418-944-9240</p>
+        <p class="description">Github: Fano10</p>
+        <p class="description">Linkedin: Miora Fanomezana Rakotondrabe</p>
+    </div>
+
+    <script>
+        function toogleVisibility(){
+            var elementToHide = document.getElementsByClassName('col-3');
+            if(elementToHide[0].style.display == 'flex'){
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'none'
+                }
+            }
+            else{
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'flex'
+                }
+            }
+        }
+    </script>
+</body>

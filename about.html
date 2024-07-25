@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class=" item nom">Fanomezana</div>
+        <div class="menu" onclick="toogleVisibility()"><i class="fa-solid fa-bars"></i></div>
+        <div class="col-3 home"><a href="index.html">Home</a></div>
+        <div class="col-3 about"><a href="about.html">About</a></div>
+        <div class="col-3 projet"><a href="projet.html">Projet</a></div>
+        <div class="col-3 contact"><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="conteneur">
+        <div class="profil">
+            <img src="img/profil.jpeg" alt="mon_profil">
+            <p class="nom">Rakotondrabe <br> Miora <br> Fanomezana</p>
+        </div>
+        <p class="description">
+            Je m’appelle Rakotondrabe Miora Fanomezana, j’ai 22 ans et je termine actuellement mon baccalauréat en informatique a l’UQAC. 
+            Ce que j'aime dans le développement web, c'est qu'il réunit trois de mes centres d'intérêt : la programmation, la résolution de problèmes et l'apprentissage continu. Pourquoi ? Parce que le développement web est un domaine en perpétuelle évolution, avec de nouvelles technologies, Framework et outils qui apparaissent régulièrement. 
+            En plus du développement d'applications web, je suis passionné par les mathématiques, la musique et l'intelligence artificielle. Pour moi, les mathématiques sont un langage universel qui permet de partager des idées et des connaissances pour résoudre des problèmes. Quant à l'intelligence artificielle, c'est un domaine en pleine expansion qui, ce que j'apprécie particulièrement, relie les mathématiques, l'informatique et les défis réels du monde.
+        </p>
+    </div>
+    <div class="container-competence">
+        <h3>Au fil de mes années à l'université et de mes recherches personelles, j'ai acquis les compétences suivantes:</h3>
+        <p>Langages de programmation: 
+            <span class="item-competence">C++</span>, 
+            <span class="item-competence">Java</span>, 
+            <span class="item-competence">Python</span>, 
+            <span class="item-competence">Javascript</span> et 
+            <span class="item-competence">C#</span>
+        </p>
+        <p>Base de données: 
+            <span class="item-competence">MySQL</span>, 
+            <span class="item-competence">SQL Oracle</span> et 
+            <span class="item-competence">scripts PL/SQL</span>
+        </p>
+        <p>Structures des données: 
+            <span class="item-competence">tableau</span>, 
+            <span class="item-competence">liste</span>, 
+            <span class="item-competence">pile</span>, 
+            <span class="item-competence">file</span>, 
+            <span class="item-competence">arbres</span>, 
+            <span class="item-competence">graphes</span> et 
+            <span class="item-competence">hachage</span>
+        </p>
+        <p>Programmation orienté objet: 
+            <span class="item-competence">classe</span>, 
+            <span class="item-competence">héritage</span>, 
+            <span class="item-competence">cycle de vie</span>, 
+            <span class="item-competence">template</span>, 
+            <span class="item-competence">polymorphisme</span> et 
+            <span class="item-competence">patron de conception</span>
+        </p>
+        <p>Application web: 
+            <span class="item-competence">HTML</span>, 
+            <span class="item-competence">CSS</span>, 
+            <span class="item-competence">DOM</span>, 
+            <span class="item-competence">Ajax</span>, 
+            <span class="item-competence">Web socket</span>, 
+            <span class="item-competence">API RESTful</span>, 
+            <span class="item-competence">MVC</span>,
+            <span class="item-competence">authentification</span>, 
+            <span class="item-competence">sécurité</span>, 
+            <span class="item-competence">conteneurisation(Docker)</span> et 
+            <span class="item-competence">déploiement(Kubernetes)</span>
+        </p>
+        <p>Intelligence artificielle: 
+            <span class="item-competence">Apprentissage superviser(régression, classification, réseaux de neurones et arbres de décisions)</span> et 
+            <span class="item-competence">Apprentissage non superviser(algorithme de regroupement ou clustering, détection des anomalies, systèmes de recommandations et apprentissage par renforcement)</span>
+        </p>
+    </div>
+
+    <script>
+        function toogleVisibility(){
+            var elementToHide = document.getElementsByClassName('col-3');
+            if(elementToHide[0].style.display == 'flex'){
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'none'
+                }
+            }
+            else{
+                for(var i=0; i< elementToHide.length ;i++){
+                    elementToHide[i].style.display = 'flex'
+                }
+            }
+        }
+    </script>
+</body>

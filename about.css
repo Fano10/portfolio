@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    color:rgb(255, 255, 255);/*definit la couleur des textes*/
+    font-family:'Lobster','Verdana', 'sans-serif';
+    text-align: center;
+    background-color: rgb(255, 255, 255)
+  }
+  html, body{ /*assurer qu'ils prennent toute la fenetre(par defaut non)*/
+    width: 99%;
+    height: 100%;
+}
+
+/* For mobile phones: */
+body [class*="col-"] {
+    width: 100%;
+    display: none;
+}
+a{
+    text-decoration: none;
+    background-color: black;
+}  
+.flex-container {
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    margin: 0 auto 0 auto 0;
+}
+
+.flex-container > div { 
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+    background-color: black;
+}
+
+.fa-solid {
+    background-color: black;
+    color:white;
+}
+
+.flex-container > .nom{
+    margin-right: auto;
+    text-transform: uppercase;
+    font-style:oblique;
+    font-size: 1.5em;
+}
+
+.conteneur{
+    width: 80%;
+    height: auto;
+    margin: 50px auto 0 auto; /*top right down left*/
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+}
+.profil {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: black;
+}
+.container-competence{
+    width: 80%;
+    height: auto;
+    margin: 5px auto 0 auto; /*top right down left*/
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+h3,p, span {
+    text-align: left;
+    line-height: 1.7;
+    font-size: 4vw;
+    color: black;
+}
+.conteneur .nom{
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    font-size: 7vw;
+    color: white;
+}
+.conteneur .description{
+    text-align:left;
+    opacity: 0.75;
+    background-color: rgb(0, 0, 0);
+    font-size: 4vw;
+    line-height: 1.7;
+    color: white;
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.item-competence {
+    background-color: rgb(216, 227, 223);
+}
+
+@media only screen and (min-width: 768px){
+    .flex-container > .menu {
+        display: none;
+    }
+    body [class*="col-"] {
+        width: auto;
+        display: flex;
+    }
+    h3,p, span{
+        font-size: 1.5vw;
+    }
+    .conteneur .nom{
+        font-size: 3vw;
+    }
+    .conteneur .description{
+        font-size: 1.5vw;
+    }
+    img{
+        width: 50%;
+        height: auto;
+    }
+    .profil{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-between;
+        background-color: black;
+    }
+}
+
