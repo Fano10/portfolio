@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/about.css">
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <a href="index.html" class="name">Fanomezana</a>
+            <i id="navDeclencheur" class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navigation">
+            <div>
+                <a href="about.html">À propos</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <div class="profil">
+                <img src="img/profil.png" alt="My_profil">
+                <p>RAKOTONDRABE<br> MIORA<br> FANOMEZANA</p>
+            </div>
+            <div class="text_about">
+                Je m’appelle Rakotondrabe Miora Fanomezana, j’ai 22 ans et je viens de terminer mon baccalauréat en informatique a l’UQAC.
+                Je suis passionné par la technologie et la résolution de problèmes. Développeur polyvalent, je me suis spécialisé à la fois en développement web et en développement de logiciels. J'ai acquis une expertise en création de sites web interactifs et en conception de logiciels robustes, ce qui me permet de proposer des solutions innovantes et adaptées aux besoins des utilisateurs.
+                Grâce à mes compétences, je suis capable de travailler sur l'ensemble du cycle de développement, de l'analyse des besoins jusqu’à la mise en production, tout en assurant une expérience utilisateur de qualité. Toujours curieux et motivé, j’aime apprendre de nouvelles technologies et relever des défis complexes pour créer des applications performantes, maintenables et évolutives.
+            </div>
+        </section>
+        <section class="skill">
+            <h3>Au fil de mes années à l'université et à travers mes recherches personnelles, j'ai su développer et perfectionner les compétences suivantes :</h3>
+
+            <p><strong>Langages de programmation :</strong><br>
+                <span class="item-competence">C#</span> : Utilisé principalement pour le développement d'API web robustes avec le framework .NET, offrant une architecture évolutive et maintenable.<br>
+                <span class="item-competence">Html,css,JavaScript, Typescript, React</span> : Employé dans le développement frontend, en particulier avec React, pour créer des interfaces utilisateur dynamiques et réactives.<br>
+                <span class="item-competence">Python</span> : Exploité dans le domaine de l'intelligence artificielle, notamment avec des bibliothèques telles que TensorFlow et scikit-learn pour le machine learning et la modélisation de données.<br>
+                <span class="item-competence">Java</span> : Utilisé pour le développement d'applications mobiles performantes sous Android Studio.<br>
+                <span class="item-competence">C++</span> : Langage polyvalent pour des applications haute performance, utilisé pour des projets nécessitant une gestion fine des ressources.
+            </p>
+            
+            <p><strong>Base de données :</strong> MySQL, Oracle SQL, SQL Server<br>
+                <span class="item-competence">Script SQL</span> : Capacité à écrire des scripts SQL complexes pour manipuler et interroger efficacement des bases de données relationnelles.<br>
+                <span class="item-competence">scripts PL/SQL</span> : Expérience dans la création de procédures stockées avancées avec Oracle, optimisant les performances des transactions.<br>
+                <span class="item-competence">ORM</span> : Compétence pour interagir avec des bases de données à l'aide d'ORM (comme Entity Framework), garantissant un accès aux données fluide et un code plus maintenable.
+            </p>            
+            <p><strong>Concept avancé:</strong><br>
+                <span class="item-competence">Méthodologie agile</span>: Compétence pour appliquer la méthodologie Agile (SCRUM), assurant une gestion efficace des projets grâce à une planification itérative, des revues régulières et une collaboration renforcée entre les équipes.<br>
+                <span class="item-competence">DevOps</span>: Compétence pour intégrer les pratiques DevOps, notamment les pipelines CI/CD, garantissant des déploiements automatisés, rapides et fiables, tout en favorisant une livraison continue de valeur aux utilisateurs.<br>
+                <span class="item-competence">Sécurité</span>: Capable de développer des applications sécurisées en prenant compte les vulnérabilités et en mettant en oeuvre les meilleures pratiques de sécurité.<br>
+                <span class="item-competence">Authentification</span>: Expérience dans la mise en place d'authentification robuste pour les applications, notamment avec la gestion de JWT.<br>
+                <span class="item-competence">Publication</span>: Compétent dans l'utilisation de Docker pour conteneuriser des applications et les déployer dans le cloud. Expérience avec Kubernetes pour l'orchestration et le déploiement à grande échelle.<br>
+                <span class="item-competence">Structure de données et algorithme</span>: Compétence pour maîtriser les structures de données et les algorithmes, permettant d'optimiser la complexité d'un programme, par exemple l'implémentation d'algorithmes de tri ou de parcours de graphes.
+            </p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Miora Fanomezana. Tous droits réservés.
+    </footer>
+</body>
+<script>
+    const button = document.getElementById('navDeclencheur');
+    const nav = document.getElementById('navigation');
+    
+    button.addEventListener('click', () => {
+        if (nav.classList.contains('openNav')) {
+            // Transition de fermeture (vers le bas)
+            nav.style.transform = 'translateY(10px)';
+            nav.style.opacity = '0';
+            setTimeout(() => {
+                nav.classList.remove('openNav');
+                nav.style.visibility = 'hidden';
+            }, 750);
+        } else {
+            // Transition d'ouverture (vers le haut)
+            nav.classList.add('openNav');
+            nav.style.visibility = 'visible';
+            nav.style.transform = 'translateY(0px)'; // Appliquer la translation à 0px pour l'ouverture
+            setTimeout(() => {
+                nav.style.opacity = '1';
+            }, 10);
+        }
+    });
+
+    window.addEventListener('resize', ()=>{
+        nav.removeAttribute('style');
+    });
+</script>

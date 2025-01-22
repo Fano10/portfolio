@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap" rel="stylesheet">
+    <link href="style/index.css" rel="stylesheet"/>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <a href="index.html" class="name">Fanomezana</a>
+            <i id="navDeclencheur" class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navigation">
+            <div>
+                <a href="about.html">À propos</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mySelf">
+            <section class="titleJob">
+                Spécialiser dans le développement<br>  de logiciel et d'application web et mobile<br>
+            </section>
+            <section class="selfIntroduce">
+                Bonjour, je suis Rakotondrabe Miora Fanomezana. Diplômé d'un baccalauréat en informatique de l'Université du Québec à Chicoutimi, je suis passionné par le développement logiciel et web . J'aime créer des solutions innovantes et fonctionnelles. Explorez mes projets pour voir mes réalisations et en apprendre plus sur mon parcours et mes compétences.
+            </section>
+            <section>
+                <a class="button_project" href="projet.html">VOIR MES PROJETS</a>
+            </section>
+        </div>
+        <section class="imageProfil">
+            <img src="img/profil.JPG" alt="mon profil">
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Miora Fanomezana. Tous droits réservés.
+    </footer>
+</body>
+<script>
+    const button = document.getElementById('navDeclencheur');
+    const nav = document.getElementById('navigation');
+    
+    button.addEventListener('click', () => {
+        if (nav.classList.contains('openNav')) {
+            // Transition de fermeture (vers le bas)
+            nav.style.transform = 'translateY(10px)';
+            nav.style.opacity = '0';
+            setTimeout(() => {
+                nav.classList.remove('openNav');
+                nav.style.visibility = 'hidden';
+            }, 750);
+        } else {
+            // Transition d'ouverture (vers le haut)
+            nav.classList.add('openNav');
+            nav.style.visibility = 'visible';
+            nav.style.transform = 'translateY(0px)'; // Appliquer la translation à 0px pour l'ouverture
+            setTimeout(() => {
+                nav.style.opacity = '1';
+            }, 10);
+        }
+    });
+
+    window.addEventListener('resize', ()=>{
+        nav.removeAttribute('style');
+    });
+</script>
+</html>

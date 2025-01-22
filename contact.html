@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakotondrabe Miora Fanomezana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bca7f89311.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/contact.css">
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <a href="index.html" class="name">Fanomezana</a>
+            <i id="navDeclencheur" class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navigation">
+            <div>
+                <a href="about.html">À propos</a>
+                <a href="projet.html">Projets</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="nom">Rakotondrabe <br> Miora <br> Fanomezana</h2>
+        <p class="description"><b> Adresse</b>: 619 rue Audet, Québec Chicoutimi, G7J 2W4</p>
+        <p class="description"><b>Email</b>: rsjasonfano@gmail.com</p>
+        <p class="description"><b>Cellulaire</b>: 418-944-9240</p>
+        <p class="description"><b>Github</b>: Fano10</p>
+        <p class="description"><b>Linkedin</b>: Miora Fanomezana Rakotondrabe</p>
+    </main>
+    <footer>
+        &copy; 2024 Miora Fanomezana. Tous droits réservés.
+    </footer>
+</body>
+<script>
+    const button = document.getElementById('navDeclencheur');
+    const nav = document.getElementById('navigation');
+    
+    button.addEventListener('click', () => {
+        if (nav.classList.contains('openNav')) {
+            // Transition de fermeture (vers le bas)
+            nav.style.transform = 'translateY(10px)';
+            nav.style.opacity = '0';
+            setTimeout(() => {
+                nav.classList.remove('openNav');
+                nav.style.visibility = 'hidden';
+            }, 750);
+        } else {
+            // Transition d'ouverture (vers le haut)
+            nav.classList.add('openNav');
+            nav.style.visibility = 'visible';
+            nav.style.transform = 'translateY(0px)'; // Appliquer la translation à 0px pour l'ouverture
+            setTimeout(() => {
+                nav.style.opacity = '1';
+            }, 10);
+        }
+    });
+
+    window.addEventListener('resize', ()=>{
+        nav.removeAttribute('style');
+    });
+</script>
